@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Kericho Community Ecotourism</title>
+  <meta name="description" content="Get in touch with Kericho Community Ecotourism to plan your visit, request a quote or learn more about our routes and community experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .form-row { margin-bottom: 20px; }
+    .form-row label { display: block; font-weight: 600; margin-bottom: 6px; color: var(--tea-green); }
+    .form-row input, .form-row select, .form-row textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--light-grey);
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      background: var(--white);
+    }
+    .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+      outline: none;
+      border-color: var(--trail-gold);
+      box-shadow: 0 0 0 3px rgba(200,138,43,0.15);
+    }
+    .form-row textarea { min-height: 150px; resize: vertical; }
+    .form-row--half { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width:600px) { .form-row--half { grid-template-columns: 1fr; } }
+    .consent-label { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; }
+    .consent-label input { width: auto; margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Kericho Community Ecotourism logo">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="discover.html">Discover Kericho</a></li>
+        <li><a href="routes.html">Routes</a></li>
+        <li><a href="charges.html">Charges</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="section section--alt" style="padding:48px 0; text-align:center;">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p class="lead">Let's plan your visit to Kericho.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:800px;">
+
+      <p style="text-align:center; margin-bottom:48px;">Whether you're planning a day trip, a group tour, a school visit or a longer stay — or you're a community group wanting to get involved — send us a message and we'll get back to you.</p>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row form-row--half">
+          <div>
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-row form-row--half">
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone">
+          </div>
+          <div>
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="subject">I am enquiring about *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Please select...</option>
+            <option>Planning a visit / requesting a quote</option>
+            <option>A specific route</option>
+            <option>A community group partnership</option>
+            <option>Media / press enquiry</option>
+            <option>General enquiry</option>
+          </select>
+        </div>
+
+        <div class="form-row form-row--half">
+          <div>
+            <label for="group-size">Number of people in your group</label>
+            <input type="number" id="group-size" name="group-size" min="1">
+          </div>
+          <div>
+            <label for="dates">Preferred dates</label>
+            <input type="text" id="dates" name="dates" placeholder="e.g. mid-October 2026">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label class="consent-label">
+            <input type="checkbox" name="consent" required>
+            <span>I consent to my details being used to respond to this enquiry. See our <a href="privacy.html">Privacy & Consent page</a>.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+      </form>
+
+      <p style="text-align:center; margin-top:20px; font-size:0.9rem; color:var(--grey);">We aim to respond within 2 working days.</p>
+
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container" style="max-width:800px;">
+      <h2 style="text-align:center;">Reach Us Directly</h2>
+
+      <div class="grid grid-2" style="margin-top:40px;">
+        <div class="card"><div class="card-body">
+          <h3>Communications Manager</h3>
+          <p><strong>Joan Cherotich</strong></p>
+          <p>📞 +254 722 801 509<br>
+          ✉️ hello@inclusivedevelopmentsolutions.com</p>
+        </div></div>
+
+        <div class="card"><div class="card-body">
+          <h3>Organisation</h3>
+          <p>Inclusive Development Solutions (IDS) Self-Help Group</p>
+          <p>Kericho County, Kenya</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:900px;">
+      <h2 style="text-align:center; margin-bottom:32px;">Find Us</h2>
+      <img src="images/route-map.jpeg" alt="Map of Kericho County showing ecotourism routes" style="border-radius:8px; width:100%; height:auto;">
+      <p style="text-align:center; margin-top:16px; font-size:0.9rem; color:var(--grey);">
+        <em>Kericho County, Kenya. Exact meeting point shared when your visit is confirmed.</em>
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container" style="max-width:800px; text-align:center;">
+      <h2>Follow Us</h2>
+      <p>Follow Kericho Community Ecotourism on social media for updates, new routes and stories from the field.</p>
+      <p style="margin-top:24px;">
+        <a href="#" class="btn btn-green" style="margin:6px;">Facebook</a>
+        <a href="#" class="btn btn-green" style="margin:6px;">Instagram</a>
+        <a href="#" class="btn btn-green" style="margin:6px;">YouTube</a>
+        <a href="#" class="btn btn-green" style="margin:6px;">WhatsApp</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Work With Us</h2>
+      <p>We welcome partnerships with tea estates, hotels, transport providers, community organisations, donors and county government.</p>
+      <p style="margin-top:20px;"><em>Subject line: "Partnership Enquiry"</em></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h4>Kericho Community Ecotourism</h4>
+        <p class="footer-about">An initiative of Inclusive Development Solutions (IDS) Self-Help Group, Kericho County, Kenya.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="discover.html">Discover Kericho</a></li>
+          <li><a href="routes.html">Routes</a></li>
+          <li><a href="charges.html">Charges</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="news.html">News & Events</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy & Consent</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <p style="font-size:0.95rem;">
+          Joan Cherotich<br>
+          Communications Manager<br>
+          📞 +254 722 801 509<br>
+          ✉️ hello@inclusivedevelopmentsolutions.com
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Inclusive Development Solutions Self-Help Group. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
